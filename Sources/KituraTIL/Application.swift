@@ -57,6 +57,9 @@ public class App {
     
     private func finalizeRoutes(with database: Database) {
         // 5 Once you’ve set up your database, you’ll list all available routes for your API to match against here.
+        self.database = database
+        initializeAcronymRoutes(app: self)
+        Log.info("Acronym routes created")
     }
     
     
